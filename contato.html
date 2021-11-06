@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peg Turismo</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/all.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+</head>
+<body>
+    <header class="contact-header">
+        <nav>
+            <a href="index.html"><img src="Images/peg.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SOBRE</a></li>
+                    <li><a href="#">DESTINOS</a></li>
+                    <li><a href="#">CONTATOS</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Contate-nos para viajar</h1>
+    </header>
+   
+    <section class="contato">
+    
+        <form class="form-contato">
+            <h3>Dados Pessoais</h3>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" placeholder="Insira seu nome">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Insiraseu e-mail">
+            <label for="telefone">Telefone</label>
+            <input type="text" id="telefone" name="telefone" placeholder="Insira seu telefone para contato">
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" placeholder="Insira seu CPF">
+            <label for="destinos">Escolha um destino</label>
+            <select name="destinos" id="destinos">
+                <option value="arraial-do-cabo">Arraial do Cabo</option>
+                <option value="lago-de-furnas">Lago de Furnas</option>
+                <option value="ilhabela">Ilhabela</option>
+            </select><br><br>
+            <label for="data">Escolha uma data</label>
+            <input type="text" id="calendario" class="calendario">
+            <button type="submit" class="botao">ENVIAR</button>
+        </form>
+    </section>
+
+    <footer>
+        <h4>Sobre nós</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis interdum pretium.<br> Nulla non purus in tellus molestie euismod sit amet ac leo. </p>
+        <div class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+        <p>Feito para o aprendizado <i class="fas fa-book"></i></p>
+    </footer>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+        $(function() {
+            $( "#calendario" ).datepicker();
+        });
+    </script>
+</body>
+</html>

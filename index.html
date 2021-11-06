@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peg Turismo</title>
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/css/all.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a href="index.html"><img src="Images/peg.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fas fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">SOBRE</a></li>
+                    <li><a href="#">DESTINOS</a></li>
+                    <li><a href="#">CONTATOS</a></li>
+                </ul>
+            </div>
+            <i class="fas fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Viage com quem entende</h1>
+            <p>Há mais de 4 anos no mercado fazendo turismo com responsabilidade,
+            oferecendo todo suporte para melhor <br>experiencia em sua viagem.</p>
+        </div>
+    </header>
+    <section class="gif">
+        
+    </section>
+    <section class="destinos">
+        <h1>Destinos</h1>
+        <p>Escolha aonde passar suas férias</p>
+
+        <div class="row">
+            <div class="destino-col">
+                <img src="Images/arraial-do-cabo-capa2019.jpg" alt="">
+                <div class="layer">
+                    <h3>Arraial do Cabo</h3>
+                </div>
+            </div>
+            <div class="destino-col">
+                <img src="Images/Grande_lago_de_Furnas_01.jpg" alt="">
+                <div class="layer">
+                    <h3>Lago de Furnas</h3>
+                </div>
+            </div>
+            <div class="destino-col">
+                <img src="Images/praia-da-pacuiba-ilhabela-home.jpg" alt="">
+                <div class="layer">
+                    <h3>Ilha Bela</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <h4>Sobre nós</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed iaculis interdum pretium.<br> Nulla non purus in tellus molestie euismod sit amet ac leo. </p>
+        <div class="icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+        <p>Feito para o aprendizado <i class="fas fa-book"></i></p>
+    </footer>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
