@@ -1,3 +1,7 @@
+<?php
+  header('Content-type: text/css');
+?>
+
 * {
   margin: 0;
   padding: 0;
@@ -202,15 +206,19 @@ nav .fas {
 /* footer css */
 
 footer {
+  margin: 15px;
   width: 100%;
   text-align: center;
   padding: 30px 0;
 }
 
 footer h4 {
-  margin-bottom: 25px;
-  margin-top: 20px;
+  border-top: 1px solid black;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  margin-top: 30px;
   font-weight: 600;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 .icons .fab {
@@ -237,10 +245,15 @@ footer h4 {
   margin-top: 100px;
 }
 
+/* Form css */
+
 .form-contato {
   border: 1px solid #ccc;
-  margin: 50px 0;
+  height: 70%;
+  width: 80%;
+  margin: auto;
   padding: 10px 20px;
+  border-radius: 5px;
 }
 
 .form-contato h3 {
@@ -260,6 +273,15 @@ footer h4 {
   background: #f0f0f0;
 }
 
+.calendar {
+  display: flex;
+  justify: space-between;
+  width: 50%;
+}
+.calendario {
+  padding-right: 3px;
+}
+
 .botao {
   display: inline-block;
   text-decoration: none;
@@ -271,6 +293,7 @@ footer h4 {
   background: transparent;
   position: relative;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .botao:hover {

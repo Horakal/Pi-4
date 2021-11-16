@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="resources\View\Pages\styles\css\all.css">
+    <link rel="stylesheet" href="resources\View\Pages\styles\style.php">
+    <link rel="preconnect" href="/https://fonts.googleapis.com">
+    <link rel="preconnect" href="/https://fonts.gstatic.com" crossorigin>
+    <link href="/https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<body>
+    {{header}}
+
+    
+    {{content}}
+
+    {{footer}}
+
+    <script>
+        $("#celular").mask("(00) 00000-0000");
+        $("#cpf").mask("000.000.000-00");
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        };
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        };
+        $(function() {
+            $("#calendario").datepicker({
+                dateFormat: "dd-mm-yy",
+                dayNamesMin: [ "D", "S", "T", "Q", "Q", "S", "S" ],
+                maxDate: 30,
+                minDate: 0
+            });             
+        });
+        var jsDate = $('#calendario').datepicker('getDate');
+        if (jsDate !== null) { // if any date selected in datepicker
+            jsDate instanceof Date; // -> true
+            jsDate.getDate();
+            jsDate.getMonth();
+            jsDate.getFullYear();
+        }
+        $(function() {
+            $("#calendario-volta").datepicker({
+                dateFormat: "dd-mm-yy",
+                dayNamesMin: [ "D", "S", "T", "Q", "Q", "S", "S" ],
+                maxDate: 30,
+                minDate:  new Date(jsDate.getFullYear(), jsDate.getMonth(), jsDate.getDate())  
+            });             
+        });        
+    </script>
+</body>
+</html>
