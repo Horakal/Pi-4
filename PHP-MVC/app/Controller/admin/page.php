@@ -16,7 +16,7 @@ class Page{
             'label' => 'Home',
             'link' => URL.'/admin'
         ],
-        'contato' => [
+        'contatos' => [
             'label' => 'Usuarios',
             'link' => URL.'/admin/contatos'
         ],

@@ -6,7 +6,7 @@ namespace App\Controller\admin;
 
 use \App\Utils\View;
 use \App\Model\Entity\Contato as ContatosViagem;
-use \WilliamCosta\DatabaseManager\Pagination;
+
 
 
 
