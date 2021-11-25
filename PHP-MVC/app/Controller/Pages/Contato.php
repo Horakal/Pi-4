@@ -11,28 +11,28 @@ class Contato extends Page
 {
 
 
-    
-   
-
     public static function getContato(){
-        $content = View::render('Pages/contato',[
+        $content = View::render('Pages/contact.php',[
             
         ]);
+        
         return parent::getPage('CONTATO - PegTurismo',$content);
+        
     }
     
     public static function insertContato($request){
         $postVars = $request->getPostVars();
-
+        
         $obContact = new ContatosViagem;
         $obContact->nome = $postVars['nome'];
         $obContact->email = $postVars['email'];
         $obContact->celular = $postVars['celular'];
         $obContact->cpf = $postVars['cpf'];
         $obContact->destino = $postVars['destinos'];
-        $obContact->data = $postVars['data'];
+        $obContact->data = $postVars['data_saida'];
+         
         $obContact->cadastrar();
-
+      
         return self::getContato();
     }
 }

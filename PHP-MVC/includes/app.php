@@ -18,6 +18,15 @@ Database::config(
     getenv('DB_PORT')
 );
 
+$conn = mysqli_connect( getenv('DB_HOST'),
+getenv('DB_USER'),
+getenv('DB_PASS'),
+getenv('DB_NAME'),);
+
+if (!$conn) {
+    die("Falha na conexão: " . mysqli_connect_error());
+}
+
 define('URL', getenv('URL'));
 
 View::init([

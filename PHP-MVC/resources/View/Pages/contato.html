@@ -1,5 +1,17 @@
+<script>
+        $("#celular").mask("(00) 00000-0000");
+        $("#cpf").mask("000.000.000-00");
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        };
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        };
+</script>
+
 <section class="contato" >
-    
+
     <form method="post" class="form-contato">
         <h3>Dados Pessoais</h3>
         <label for="nome">Nome:</label>
@@ -11,19 +23,10 @@
         <label for="cpf">CPF:</label>
         <input type="text" id="cpf" name="cpf" placeholder="Insira seu CPF" required>
         <div class="select">
-        <label for="destinos">Escolha um destino: </label>
-        <select name="destinos" id="destinos" >
-            <option value="arraial-do-cabo">Arraial do Cabo</option>
-            <option value="lago-de-furnas">Lago de Furnas</option>
-            <option value="ilhabela">Ilhabela</option>
-        </select><br><br>
-        <label for="data">Escolha a data:    </label>
-        <select name="data" id="data" >
-            <option value="2021-11-22">22/11/2021</option>
-            <option value="2021-12-03">03/12/2021</option>
-            <option value="2021-12-08">08/12/2021</option>
-        </select><br>
-        <button type="submit" class="botao">ENVIAR</button>
-      </div>
+           {{select}}
+        </div>
+          <button type="submit" class="botao">ENVIAR</button>
     </form>
+    
+   
 </section>

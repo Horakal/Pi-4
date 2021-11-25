@@ -25,8 +25,8 @@ class Contato{
      */
     public function cadastrar(){
 
-        //define a data
-        $this->data = date('Y-m-d');
+        
+        
 
         //insere o cliente no banco de dados
         $this->id = (new Database('contato'))->insert([
@@ -36,8 +36,9 @@ class Contato{
             'celular' => $this->celular,
             'destino' => $this->destino,
             'data' => $this->data
-
+           
         ]);
+       
         return true;
     }
 

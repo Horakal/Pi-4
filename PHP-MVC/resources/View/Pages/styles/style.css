@@ -265,6 +265,8 @@ footer h4 {
   margin-top: 100px;
 }
 
+
+
 /* Form css */
 
 .form-contato {
@@ -314,6 +316,7 @@ footer h4 {
   position: relative;
   cursor: pointer;
   border-radius: 5px;
+
 }
 
 .botao:hover {
@@ -362,3 +365,4 @@ footer h4 {
   border-radius: 4px;
   background-color: white;
 }
+
