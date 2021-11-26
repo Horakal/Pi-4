@@ -2,25 +2,14 @@
 
 namespace App\Controller\admin;
 
-
-
 use \App\Utils\View;
 use \App\Model\Entity\Contato as ContatosViagem;
 
-
-
-
 class contatos extends Page{
-
-
     private static function getContactItems($request){
-
         $itens = '';
-
-       
-
         $results = ContatosViagem::getContato(null);
-
+        
         while($obContact = $results->fetchObject(ContatosViagem::class)){
             $itens .= View::render('admin/modules/contatos/item',[
                 'nome' => $obContact->nome,
@@ -34,8 +23,7 @@ class contatos extends Page{
         return $itens;
     }
 
-    public static function getContato($request){
-        
+    public static function getContato($request){    
         $content = View::render('admin/modules/contatos/index', [
             'itens' => self::getContactItems($request)
         ]);

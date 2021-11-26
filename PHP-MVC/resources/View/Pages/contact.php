@@ -68,18 +68,18 @@
         <br />
         <form method="post" class="form-contato">
         <h3>Dados Pessoais</h3>
-        <label for="nome">Nome<span>*</span></label>
+        <label for="nome" >Nome<span class="require">*</span></label>
         <input type="text" id="nome" name="nome" placeholder="Insira seu nome" required>
-        <label for="email" >Email<span>*</span></label>
+        <label for="email" >Email<span class="require">*</span></label>
         <input type="email" id="email" name="email" placeholder="Insira seu e-mail" required>
-        <label for="celular">Celular<span>*</span></label>
+        <label for="celular">Celular<span class="require">*</span></label>
         <input type="text" id="celular" name="celular" placeholder="(00) 00000-0000" required>
-        <label for="cpf">CPF<span>*</span></label>
+        <label for="cpf">CPF<span class="require">*</span></label>
         <input type="text" id="cpf" name="cpf" placeholder="Insira seu CPF" required>
         <div class="select">
-            <label>SELECIONE UM DESTINO<span>*</span></label>
+            <label>SELECIONE UM DESTINO<span class="require">*</span></label>
             <select name="destinos" id="destinos" title="Selecione o Destino"></select>
-            <label>SELECIONE UMA DATA<span>*</span></label>
+            <label>SELECIONE UMA DATA<span class="require">*</span></label>
             <select name="data_saida" id="data_saida"  title="Selecione a Data"></select>
         </div>
           <button type="submit" class="botao">ENVIAR</button>

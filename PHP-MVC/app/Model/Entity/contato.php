@@ -24,10 +24,6 @@ class Contato{
      * @return boolean
      */
     public function cadastrar(){
-
-        
-        
-
         //insere o cliente no banco de dados
         $this->id = (new Database('contato'))->insert([
             'nome' => $this->nome,
@@ -35,10 +31,8 @@ class Contato{
             'cpf' => $this->cpf,
             'celular' => $this->celular,
             'destino' => $this->destino,
-            'data' => $this->data
-           
-        ]);
-       
+            'data' => $this->data     
+        ]);   
         return true;
     }
 

@@ -1,0 +1,18 @@
+<h1>Editar Viagem</h1>
+<hr>
+<a href="{{URL}}/admin/viagem">
+    <button type="button" class="btn btn-warning">Voltar</button>
+</a>
+<hr>
+
+{{stats}}
+<form action="" method="post">
+
+    
+    <label for="Destino">Destino</label>
+    <input type="text" name="cod_destino" value="{{cod_destino}}">
+   
+    <label for="Data">Data </label>
+    <input type="date" name="nome" id="nome" placeholder="Ano/mes/dia" value="{{nome}}" required>
+    <button type="submit" class="btn btn-primary">Editar</button>
+</form>

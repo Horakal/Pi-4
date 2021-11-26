@@ -25,10 +25,10 @@ class Alert{
      * @param [string] $message
      * @return string
      */
-    public static function getSuccess($message){
+    public static function getSuccess($messagem){
         return View::render('admin/alert/status',[
         'tipo' => 'success',
-        'mensagem' => $message
+        'mensagem' => $messagem
         ]);
     }
 }

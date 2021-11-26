@@ -1,0 +1,21 @@
+<h1>Viagens</h1>
+<p>Insira ou delete uma viagem</p>
+<hr>
+<a href="{{URL}}/admin/viagem/new">
+    <button type="button" class="btn btn-success">Cadastrar Viagem</button>
+</a>
+<hr>
+{{stats}}
+<table class="table table-light table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Local</th>  
+            <th>Data</th>
+            <th>Açoes</th>     
+        </tr>
+    </thead>
+    <tbody>
+        {{itens}}
+    </tbody>
+</table>
